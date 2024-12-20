@@ -29,7 +29,7 @@ const renderStars = (rating) => {
 
 export default function ProductPage() {
   const { id } = useParams();
-  const url = "http://localhost:5001/api/products";
+  const url = "https://sbabeetbackend.onrender.com/api/products";
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState({
     name: "",

@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 
 function Profile() {
-  const userUrl = "http://localhost:5001/api/users";
-  const orderUrl = "http://localhost:5001/api/orders";
+  const userUrl = "https://sbabeetbackend.onrender.com/api/users";
+  const orderUrl = "https://sbabeetbackend.onrender.com/api/orders";
 
   const [user, setUser] = useState({});
   const [userId, setUserId] = useState(null);

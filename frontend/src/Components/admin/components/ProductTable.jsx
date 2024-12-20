@@ -18,7 +18,7 @@ export default function ProductTable() {
   const [filterBy, setFilterBy] = useState("price");
   const [filterOrder, setFilterOrder] = useState("asc");
   const [productList, setProductList] = useState([]);
-  const url = "http://localhost:5001/api/products";
+  const url = "https://sbabeetbackend.onrender.com/api/products";
   const [userId, setUserId] = useState();
 
   const handleDelete = async (productId) => {

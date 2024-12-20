@@ -4,8 +4,8 @@ import AnalyticsCharts from "../components/AnalyticsCharts";
 import axios from "axios";
 
 export default function AnalyticsSection() {
-  const userUrl = "http://localhost:5001/api/users";
-  const orderUrl = "http://localhost:5001/api/orders";
+  const userUrl = "https://sbabeetbackend.onrender.com/api/users";
+  const orderUrl = "https://sbabeetbackend.onrender.com/api/orders";
   const [users, setUsers] = useState([]);
   const [orders, setOrders] = useState([]);
 

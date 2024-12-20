@@ -16,7 +16,7 @@ export default function OrderTable() {
   const [expandedOrders, setExpandedOrders] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [orders, setOrders] = useState([]);
-  const url = "http://localhost:5001/api/orders";
+  const url = "https://sbabeetbackend.onrender.com/api/orders";
 
   useEffect(() => {
     axios

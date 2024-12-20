@@ -7,7 +7,7 @@ import Sidebar from "../../Components/admin/layout/Sidebar";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 export default function AdminDashboard() {
-  const userUrl = "http://localhost:5001/api/users";
+  const userUrl = "https://sbabeetbackend.onrender.com/api/users";
   const [userId, setUserId] = useState(null); // Use state for userId
   const [user, setUser] = useState({
     name: "",

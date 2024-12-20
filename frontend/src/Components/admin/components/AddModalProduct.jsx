@@ -58,7 +58,9 @@ export default function AddProductModal({ isOpen, onClose }) {
       };
 
       axios
-        .post("http://localhost:5001/api/products", productData, { headers })
+        .post("https://sbabeetbackend.onrender.com/api/products", productData, {
+          headers,
+        })
         .then((response) => {
           alert(response.data.msg);
           onClose();

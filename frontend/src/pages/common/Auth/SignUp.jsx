@@ -1,37 +1,37 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
 export default function SignUp() {
-    const url = "http://localhost:5001/api/users"; 
-    const navigate = useNavigate(); 
-   
-    const [user, setUser] = useState({ 
-      userName: "", 
-      email: "", 
-      age: "", 
-      password: "", 
-    }); 
-   
-    const handleChange = (e) => { 
-      setUser({ ...user, [e.target.id]: e.target.value }); 
-    }; 
-   
-    const handleSubmit = (e) => { 
-      e.preventDefault(); 
-   
-      axios 
-        .post(url, user) 
-        .then((response) => { 
-          console.log(response.data); 
-          alert(response.data.msg); 
-          navigate("/SignIn"); 
-        }) 
-        .catch((error) => { 
-          alert(error.response.data.msg); 
-          console.error("There was an error!", error); 
-        }); 
-    }; 
+  const url = "https://sbabeetbackend.onrender.com/api/users";
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    userName: "",
+    email: "",
+    age: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post(url, user)
+      .then((response) => {
+        console.log(response.data);
+        alert(response.data.msg);
+        navigate("/SignIn");
+      })
+      .catch((error) => {
+        alert(error.response.data.msg);
+        console.error("There was an error!", error);
+      });
+  };
 
   return (
     <div className="min-h-screen py-12 bg-gray-50 flex flex-col justify-center items-center sm:px-6 lg:px-8">
@@ -43,21 +43,20 @@ export default function SignUp() {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white px-8 py-4 shadow sm:rounded-lg sm:px-10">
           <form onSubmit={handleSubmit}>
-            
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block mt-3 text-sm font-medium text-gray-700"
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  value={user.name}
-                  type="text"
-                  onChange={handleChange}
-                  className="dark:bg-gray-50 light:bg-gray-50 text-gray-900 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 "
-                />
+            <div>
+              <label
+                htmlFor="name"
+                className="block mt-3 text-sm font-medium text-gray-700"
+              >
+                Name
+              </label>
+              <input
+                id="name"
+                value={user.name}
+                type="text"
+                onChange={handleChange}
+                className="dark:bg-gray-50 light:bg-gray-50 text-gray-900 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 "
+              />
             </div>
 
             <label
@@ -99,7 +98,7 @@ export default function SignUp() {
               className="bg-white w-full text-center text-sm text-indigo-600 hover:text-indigo-500"
               onClick={() => navigate("/SignIn")}
             >
-                Already have an account? Sign In
+              Already have an account? Sign In
             </button>
           </div>
         </div>

@@ -7,9 +7,9 @@ import { CART_ACTIONS } from "../../../Context/cartConstants";
 import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
-  const orderUrl = "http://localhost:5001/api/orders";
-  const userUrl = "http://localhost:5001/api/users";
-  const productUrl = "http://localhost:5001/api/products";
+  const orderUrl = "https://sbabeetbackend.onrender.com/api/orders";
+  const userUrl = "https://sbabeetbackend.onrender.com/api/users";
+  const productUrl = "https://sbabeetbackend.onrender.com/api/products";
   const [section, setSection] = useState(1);
   const { state: cartState, dispatch } = useCart();
   const navigate = useNavigate();

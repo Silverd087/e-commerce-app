@@ -9,7 +9,7 @@ export default function AnalyticsCards({ users }) {
     const fetchLifetimeIncome = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/api/orders/lifetime-income"
+          "https://sbabeetbackend.onrender.com/api/orders/lifetime-income"
         );
         setLifetimeIncome(response.data.lifetimeIncome);
       } catch (error) {

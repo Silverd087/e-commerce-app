@@ -24,7 +24,9 @@ export default function ProductsPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/products");
+        const response = await axios.get(
+          "https://sbabeetbackend.onrender.com/api/products"
+        );
         if (Array.isArray(response.data.products)) {
           setProducts(response.data.products);
         } else {

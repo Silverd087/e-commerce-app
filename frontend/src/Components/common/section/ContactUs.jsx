@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import axios from "axios";
 
 export default function ContactUs() {
-  const url = "http://localhost:5001/api/messages";
+  const url = "https://sbabeetbackend.onrender.com/api/messages";
   const [message, setMessage] = useState({
     name: "",
     from: "",

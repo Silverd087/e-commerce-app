@@ -4,7 +4,7 @@ import ContactUs from "../../Components/common/section/ContactUs";
 import Carousel from "../../Components/common/section/Carousel";
 import Categories from "../../Components/common/section/Categories";
 import { useState, useEffect } from "react";
-import Hero from "../../Components/common/section/Hero"
+import Hero from "../../Components/common/section/Hero";
 import axios from "axios";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/api/products")
+      .get("https://sbabeetbackend.onrender.com/api/products")
       .then((response) => {
         setProducts(response.data.products);
         console.log(response.data.products);

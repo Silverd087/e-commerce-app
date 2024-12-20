@@ -5,7 +5,7 @@ export default function MessageList({ user }) {
   const [selectedMessage, setSelectedMessage] = useState();
   const [reply, setReply] = useState("");
   const [messages, setMessages] = useState([]);
-  const url = "http://localhost:5001/api/messages";
+  const url = "https://sbabeetbackend.onrender.com/api/messages";
 
   useEffect(() => {
     axios
