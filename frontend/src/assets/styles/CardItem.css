@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #252525;
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Adjusted for additional buttons */
+  width: 250px;
+  border-radius: 15px;
+  margin: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product_card .top_card {
+  background-color: #ef3749;
+  height: 45%;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+
+.top_card .product_image {
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  width: 220px;
+  height: auto;
+  transform: rotate(-8deg) translateX(-50%);
+  z-index: 2;
+}
+
+.top_card .product_price {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.75rem;
+}
+
+.product_card .bottom_card {
+  background-color: white;
+  height: 55%;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  padding: 1rem;
+}
+
+.bottom_card .product_name {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 1.2rem;
+}
+
+.bottom_card .product_name h6 {
+  color: #d9d9d9;
+  font-size: 0.9rem;
+}
+
+.bottom_card .product_name h4 {
+  color: #333333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.bottom_card .product_description {
+  text-align: center;
+  font-size: 10px;
+  color: #7c7c7c;
+  font-weight: 400;
+  max-width: 75%;
+  margin: auto;
+  margin-top: 1rem;
+  max-height: 30px; /* Limit the height of the description */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.bottom_card .cta_add_to_cart,
+.bottom_card .view-product-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ef3749;
+  color: white;
+  border-radius: 200px;
+  outline: none;
+  border: none;
+  padding: 0.45rem;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bottom_card .cta_add_to_cart:hover,
+.bottom_card .view-product-btn:hover {
+  background-color: #d31c38;
+}
+
+.edit_delete_buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.75rem; /* Spacing between buttons */
+}
+
+.edit_button,
+.delete_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: white;
+}
+
+.edit_button:hover {
+  color: #4f46e5;
+  transform: scale(1.2);
+}
+
+.delete_button:hover {
+  color: #dc2626;
+  transform: scale(1.2);
+}
